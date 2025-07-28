@@ -2127,7 +2127,7 @@ button:hover {
 }
 
 .hero-content {
-  position: relative;
+   margin-top: 100px;
   z-index: 3;
   color: white;
   text-align: center;

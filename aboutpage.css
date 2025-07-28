@@ -56,3 +56,598 @@
     border-top: 6px solid #FF6B00;
   }
 }
+
+/* ===================== TEAM SECTION STYLES ===================== */
+.our-team-container {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.team-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Team Section Structure */
+.team-section {
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.team-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+ margin-top: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-line {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #FF6B00, #ff8533);
+  margin: 0 auto;
+  border-radius: 2px;
+  position: relative;
+}
+
+.section-line::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #FF6B00;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(255, 107, 0, 0.3);
+}
+
+/* Team Rows */
+.team-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.team-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Base Team Card Styles */
+.team-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  /* Fixed dimensions for consistent sizing */
+  width: 280px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+/* Ensure 4 cards fit in senior row on large screens */
+@media (min-width: 1301px) {
+  .senior-row {
+    gap: 25px;
+  }
+  
+  .senior-row .team-card {
+    width: 270px;
+  }
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #FF6B00, #ff8533);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover::before {
+  transform: scaleX(1);
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid gray;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover img {
+  border-color: #FF6B00;
+  transform: scale(1.05);
+}
+
+.team-card .name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  min-height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card .degree {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FF6B00;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #FF6B00, #ff8533);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  min-height: 1.2rem;
+}
+
+.team-card .designation {
+  font-size: 0.95rem;
+  color: #6c757d;
+  line-height: 1.4;
+  font-weight: 400;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+}
+
+/* PARTNER LEVEL STYLING */
+.partner-row {
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.partner-card {
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  border: 3px solid #FF6B00;
+  box-shadow: 0 15px 40px rgba(255, 107, 0, 0.2);
+  /* Override base dimensions for partner cards if needed */
+  height: 340px;
+}
+
+.partner-card img {
+  width: 140px;
+  height: 140px;
+  border: 5px solid #FF6B00;
+}
+
+.partner-card .name {
+  font-size: 1.2rem;
+  color: #FF6B00;
+}
+
+.partner-card .degree {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.partner-card .designation {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+/* SENIOR LEVEL STYLING */
+.senior-row {
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.senior-card {
+  background: linear-gradient(135deg, #fff 0%, #f1f8ff 100%);
+  border: 2px solid orange;
+  flex: 0 0 auto;
+}
+
+.senior-cards {
+  background: linear-gradient(135deg, #fff 0%, #f1f8ff 100%);
+  border: 2px solid gray;
+  flex: 0 0 auto;
+}
+
+
+.senior-card img {
+  border: 4px solid orange;
+}
+
+.senior-card .name {
+  color: orange;
+}
+
+.senior-card .degree {
+  color: #007bff;
+}
+
+.senior-card:hover {
+  border-color: gray;
+  box-shadow: 0 20px 50px rgba(0, 123, 255, 0.15);
+}
+
+/* JUNIOR LEVEL STYLING */
+.junior-row {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.junior-card {
+  background: linear-gradient(135deg, #fff 0%, #f8fff8 100%);
+  border: 2px solid #28a745;
+}
+
+.junior-card img {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #28a745;
+}
+
+.junior-card .name {
+  font-size: 1.2rem;
+  color: #28a745;
+}
+
+.junior-card .designation {
+  font-size: 0.9rem;
+}
+
+.junior-card:hover {
+  border-color: #1e7e34;
+  box-shadow: 0 20px 50px rgba(40, 167, 69, 0.15);
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+@media (max-width: 1300px) {
+  .team-row {
+    gap: 20px;
+  }
+  
+  .team-card {
+    width: 260px;
+    height: 300px;
+  }
+  
+  .partner-card {
+    height: 320px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .senior-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .senior-row .team-card {
+    flex: 0 0 calc(50% - 20px);
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .team-row {
+    gap: 15px;
+  }
+  
+  .team-card {
+    width: 220px;
+    height: 280px;
+  }
+  
+  .partner-card {
+    height: 300px;
+  }
+  
+  .senior-row .team-card {
+    flex: 0 0 calc(50% - 15px);
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-team-container {
+    padding: 60px 15px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .team-section {
+    margin-bottom: 60px;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .team-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .team-card {
+    width: 100%;
+    max-width: 320px;
+    min-width: 280px;
+    height: 320px;
+    padding: 25px 20px;
+  }
+  
+  .partner-card {
+    height: 340px;
+  }
+  
+  .team-card img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .partner-card img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .team-card .name {
+    font-size: 1.2rem;
+  }
+  
+  .partner-card .name {
+    font-size: 1.4rem;
+  }
+  
+  .team-card .designation {
+    font-size: 0.85rem;
+  }
+}
+
+/* ===================== VIDEO HERO SECTION FIXES ===================== */
+/* Fix hero section layout for about page */
+.hero-section {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.background-videoabout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background-color: rgba(249, 115, 22, 0.4); /* same as #f97316 at 40% opacity */
+
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 0;
+}
+
+.hero-content .title {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content .subtitle {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure content sections appear properly below video */
+.about-content {
+  position: relative;
+  z-index: 4;
+  background: white;
+  padding-top: 80px;
+  margin-top: 0;
+}
+
+.why-next-ledgers {
+  position: relative;
+  z-index: 4;
+  margin-top: 0;
+}
+
+/* Responsive video section */
+@media (max-width: 992px) {
+  .hero-section {
+    height: 60vh;
+  }
+  
+  .hero-content .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 50vh;
+  }
+  
+  .hero-content .title {
+    font-size: 2rem;
+  }
+  
+  .about-content {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 40vh;
+  }
+  
+  .hero-content .title {
+    font-size: 1.8rem;
+  }
+  
+  .about-content {
+    padding-top: 40px;
+  }
+}
+
+/* ===================== FOOTER FIXES FOR THIS PAGE ===================== */
+/* Ensure full page layout for sticky footer */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Make main content area flex-grow to push footer down */
+.header {
+  flex-shrink: 0;
+}
+
+/* Video section should not grow */
+.hero-section {
+  flex-shrink: 0;
+}
+
+/* Main content sections should not shrink */
+.about-content,
+.why-next-ledgers,
+.mission-vision,
+.values-section,
+.our-team-container {
+  flex-shrink: 0;
+}
+
+/* Create space for content to push footer down */
+.values-section:last-of-type {
+  flex-grow: 1;
+  min-height: 200px;
+}
+
+/* Footer full width and bottom positioning */
+.footer-container {
+  width: 100vw !important;
+  margin: 0 !important;
+  margin-left: calc(-50vw + 50%) !important;
+  padding: 40px 20px !important;
+  box-sizing: border-box;
+  margin-top: auto;
+  background: linear-gradient(rgba(0, 71, 119, 0.9), rgba(0, 71, 119, 0.9)) !important;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+/* Remove any container restrictions on footer */
+.footer-container * {
+  box-sizing: border-box;
+}
+
+/* Ensure footer columns adapt properly */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 30px 15px !important;
+    text-align: center;
+    margin-left: calc(-50vw + 50%) !important;
+    width: 100vw !important;
+  }
+  
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}
+
+/* Additional fix for very small screens */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 25px 10px !important;
+    margin-left: calc(-50vw + 50%) !important;
+    width: 100vw !important;
+  }
+}

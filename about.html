@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="./aboutpage.css" />
     
-    aboutpage.css
+ 
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
@@ -34,8 +34,7 @@
     />
 </head>
 <body>
-      <!--=============== HEADER ===============-->
-    <header class="header">
+ <header class="header">
       <nav class="nav container">
         <div class="nav__data">
           <a href="index.html" class="nav__logo">
@@ -57,7 +56,30 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li><a class="nav__link" href="index.html">Home</a></li>
-            <li><a class="nav__link" a href="about.html">About Us</a></li>
+
+            <li class="dropdown__item">
+    <div class="nav__link">
+      <a href="about.html">
+        About Us <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+      </a>
+    </div>
+
+    <ul class="dropdown__menu">
+      <li class="dropdown__subitem">
+        <div class="dropdown__link">
+          <a href="about.html" class="menulinkanchor">
+            <i class="ri-information-line"></i> About Us
+          </a>
+        </div>
+
+        <div class="dropdown__link">
+          <a href="outteam.html" class="menulinkanchor">
+            <i class="ri-team-line"></i> Our Team
+          </a>
+        </div>
+      </li>
+    </ul>
+  </li>
 
             <!--=============== DROPDOWN 1 ===============-->
                 <!-- dropdown two  -->
@@ -111,8 +133,13 @@
                
                  
                 </li>
+
+                
               </ul>
             </li>
+
+            
+            
 
                 <li class="dropdown__item">
               <div class="nav__link">
@@ -167,7 +194,6 @@
         </div>
       </nav>
     </header>
-
     <!-- Page Header -->
     <!-- <section class="page-header"> -->
         <!-- <div class="container">
@@ -276,100 +302,7 @@ decade ago. It is a team of highly qualified, talented, and experienced professi
 
 
   
-<div class="our-team-container">
-  <div class="team-layout">
-
-    <h3  style="color: orange; font-size: 2rem; " class="text-orange-500 text-center font-bold text-xl mt-4">Our Team</h3>
-
-
-    <!-- Row 1: 1 Member -->
-    <div class="team-row">
-      <div class="team-card">
-        <img src="./image/TeamImage/Durgesh_Pandey-removebg-preview.png" alt="Durgesh Pandey" />
-        <div class="name">Durgesh Pandey</div>
-        <div class="degree">ACCA</div>
-        <div class="designation">Managing Partner</div>
-      </div>
-    </div>
-
-    <!-- Row 2: 4 Members -->
-    <div class="team-row">
-      <div class="team-card">
-        <img src="./image/TeamImage/Anjali_Sharma-removebg-preview.png" alt="Anjali Sharma" />
-        <div class="name">Anjali Sharma</div>
-        <!-- <div class="degree">MBA</div> -->
-        <div class="designation">MBA Partner, Non-Profit Accounting</div>
-      </div>
-      <div class="team-card">
-        <img src="./image/TeamImage/Akash_Gangwar-removebg-preview.png" alt="Akash Gangwar" />
-        <div class="name">Akash Gangwar</div>
-        <!-- <div class="degree">M.com, EA</div> -->
-        <div class="designation">M.com, EA Sr. Manager, Audit and Accounting</div>
-      </div>
-      <div class="team-card">
-        <img src="./image/TeamImage/Parwinder_Singh-removebg-preview.png" alt="Parwinder Singh" />
-        <div class="name">Parwinder Singh</div>
-         
-        <div class="designation">MBA Senior Manager, Audit and Accounting</div>
-      </div>
-      <div class="team-card">
-        <img src="./image/TeamImage/Ankita-removebg-preview.png" alt="Ankita Varde" />
-        <div class="name">Ankita Varde</div>
-         
-        <div class="designation">CPA Head of Tax & Compliance</div>
-      </div>
-    </div>
-
-    <!-- Row 3: 4 Members -->
-    <div class="team-row">
-      <div class="team-card">
-        <img src="./image/TeamImage/Dharmesh_Kumar-removebg-preview.png" alt="Dharmesh Kumar" />
-        <div class="name">Dharmesh Kumar</div>
-        <div class="designation">Client Onboarding Specialist</div>
-      </div>
-      <div class="team-card">
-        <img src="./image/TeamImage/Varun_Chauhan-removebg-preview.png" alt="Varun Chauhan" />
-        <div class="name">Varun Chauhan</div>
-        <div class="designation">Payroll Specialist</div>
-      </div>
-      <div class="team-card">
-        <img src="./image/TeamImage/Md._Almasud-removebg-preview.png" alt="Md. Almasud" />
-        <div class="name">Md. Almasud</div>
-        <div class="designation">Sales Tax & GST/HST  Specialist</div>
-      </div>
-      <div class="team-card">
-        <img src="./image/TeamImage/Nikhil_Kushwaha-removebg-preview.png" alt="Nikhil Kushwaha" />
-        <div class="name">Nikhil Kushwaha</div>
-        <div class="designation">AR/ AP Specialist</div>
-      </div>
-    </div>
-
-    <!-- Row 4: 4 Members -->
-    <div class="team-row">
-      <div class="team-card">
-        <img src="./image/TeamImage/Avneesh_Mishra-removebg-preview.png" alt="Avneesh Mishra" />
-        <div class="name">Avneesh Mishra</div>
-        <div class="designation">Training & Quality Manager</div>
-      </div>
-      <div class="team-card">
-        <img src="./image/TeamImage/Karan Kapoor.jpg" alt="Karan Kapoor" />
-        <div class="name">Karan Kapoor</div>
-        <div class="designation">Marketing Manager</div>
-      </div>
-      <div class="team-card">
-        <img src="./image/TeamImage/Kirti_Kapoor-removebg-preview.png" alt="Kirti Kapoor" />
-        <div class="name">Kirti Kapoor</div>
-        <div class="designation">HR Manager</div>
-      </div>
-      <div class="team-card">
-        <img src="./image/TeamImage/Piyush_Adhikari-removebg-preview.png" alt="Piyush Adhikari" />
-        <div class="name">Piyush Adhikari</div>
-        <div class="designation">IT & Security Administrator</div>
-      </div>
-    </div>
-
-  </div>
-</div>
+ 
   <!-- <section class="ourTeam-section">
     <div class="ourTeam-header">
       <h1 class="ourTeam-title">Meet our awesome team</h1>
@@ -415,7 +348,7 @@ decade ago. It is a team of highly qualified, talented, and experienced professi
   </section>  
    -->
     <!-- Mission & Vision -->
-    <section class="mission-vision">
+    <section class="mission-vision" style="margin-top:20px;">
         <div class="container">
             <div class="mv-grid">
                 <div class="mv-card">
