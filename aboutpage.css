@@ -70,13 +70,10 @@
 }
 
 /* Team Section Structure */
-.team-section {
-  margin-bottom: 80px;
-  position: relative;
-}
+ 
 
 .team-section:last-child {
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 /* Section Headers */
@@ -189,7 +186,8 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
+  display: block;
   border: 4px solid gray;
   transition: all 0.3s ease;
 }
@@ -228,11 +226,15 @@
   line-height: 1.4;
   font-weight: 400;
   min-height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   text-align: center;
   flex: 1;
+  padding: 10px 5px;
+}
+
+.sr-manager {
+  font-weight: 700;
+  color: #2c3e50;
 }
 
 /* PARTNER LEVEL STYLING */
@@ -253,6 +255,8 @@
 .partner-card img {
   width: 140px;
   height: 140px;
+  margin: 0 auto 20px auto;
+  display: block;
   border: 5px solid #FF6B00;
 }
 
@@ -293,6 +297,8 @@
 
 
 .senior-card img {
+  margin: 0 auto 20px auto;
+  display: block;
   border: 4px solid orange;
 }
 
@@ -323,6 +329,8 @@
 .junior-card img {
   width: 100px;
   height: 100px;
+  margin: 0 auto 20px auto;
+  display: block;
   border: 3px solid #28a745;
 }
 
@@ -460,13 +468,13 @@
 /* Fix hero section layout for about page */
 .hero-section {
   position: relative;
-  height: 70vh;
+  height: 60vh;
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0;
+  margin-bottom: 0; 
 }
 
 .background-videoabout {
@@ -590,27 +598,15 @@ body {
   flex-shrink: 0;
 }
 
-/* Video section should not grow */
-.hero-section {
-  flex-shrink: 0;
-}
-
-/* Main content sections should not shrink */
-.about-content,
-.why-next-ledgers,
-.mission-vision,
-.values-section,
+/* Main content wrapper to push footer down */
 .our-team-container {
-  flex-shrink: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-/* Create space for content to push footer down */
-.values-section:last-of-type {
-  flex-grow: 1;
-  min-height: 200px;
-}
-
-/* Footer full width and bottom positioning */
+/* Footer positioned at bottom */
 .footer-container {
   width: 100vw !important;
   margin: 0 !important;
@@ -622,6 +618,7 @@ body {
   position: relative;
   left: 0;
   right: 0;
+  flex-shrink: 0;
 }
 
 /* Remove any container restrictions on footer */

@@ -24,7 +24,7 @@
     />
 </head>
 <body>
-  <header class="header">
+    <header class="header">
       <nav class="nav container">
         <div class="nav__data">
           <a href="index.html" class="nav__logo">
@@ -75,7 +75,7 @@
                 <!-- dropdown two  -->
                 <li class="dropdown__item">
               <div class="nav__link">
-              <a  href="service.html">
+              <a  href="serviceUsa.html">
                   Services In USA<i class="ri-arrow-down-s-line dropdown__arrow"></i>
               </a>
               </div>
@@ -133,7 +133,7 @@
 
                 <li class="dropdown__item">
               <div class="nav__link">
-                   <a  href="service.html">
+                   <a  href="servicecanada.html">
 
                      Services In Canada<i class="ri-arrow-down-s-line dropdown__arrow"></i>
                     </a>
@@ -203,239 +203,356 @@
         <p class="subtitle">
 
         </p>
-        <h1 class="title">Bookkeeping Services In Usa</h1>
+        <h1 class="title">Services In Canada</h1>
       </div>
     </section>
 
-  <section class="bookkeeping-section">
-        <div class="bookkeeping-container" style="display: flex; align-items: center; gap: 60px;">
-            <div class="bookkeeping-content">
-                <h2 class="bookkeeping-section-title">
-                    <span class="bookkeeping-emoji">🔍</span>
-                    What You Get with Our Services
-                </h2>
-                <p class="bookkeeping-section-text">
-                    Our comprehensive bookkeeping services are designed to give you complete financial clarity and control. We handle everything from daily transactions to monthly reporting, ensuring your business stays on track.
-                </p>
-                <ul class="bookkeeping-features-list">
-                    <li class="bookkeeping-feature-item">
-                        <div class="bookkeeping-feature-title">Complete Financial Management</div>
-                        <div class="bookkeeping-feature-description">End-to-end handling of all your financial processes</div>
-                    </li>
-                    <li class="bookkeeping-feature-item">
-                        <div class="bookkeeping-feature-title">Real-time Reporting</div>
-                        <div class="bookkeeping-feature-description">Access to up-to-date financial information whenever you need it</div>
-                    </li>
-                </ul>
-            </div>
-            <div class="bookkeeping-image">
-                 <img src="./image/websiteImage/DSC09746.JPG" alt="Financial Reports" />
-            </div>
-        </div>
-    </section>
+  <style>
+    /* Service Cards Styling */
+    .cards-container {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
 
-    <!-- Transaction Management Section -->
-    <section class="bookkeeping-section">
-        <div class="bookkeeping-container" style="display: flex; align-items: center; gap: 60px;">
-            <div class="bookkeeping-image">
-                 <img src="./image/websiteImage/DSC09738.JPG" alt="Financial Reports" />
-            </div>
-            <div class="bookkeeping-content">
-                <h2 class="bookkeeping-section-title">
-                    <span class="bookkeeping-emoji">📘</span>
-                    Day-to-Day Transaction Management
-                </h2>
-                <p class="bookkeeping-section-text">
-                    We meticulously record all financial transactions — income, expenses, reimbursements, and transfers — ensuring your books stay clean and audit-ready.
-                </p>
-                <ul class="bookkeeping-features-list">
-                    <li class="bookkeeping-feature-item">
-                        <div class="bookkeeping-feature-title">Income Tracking</div>
-                        <div class="bookkeeping-feature-description">Accurate recording and categorization of all revenue streams</div>
-                    </li>
-                    <li class="bookkeeping-feature-item">
-                        <div class="bookkeeping-feature-title">Expense Management</div>
-                        <div class="bookkeeping-feature-description">Detailed tracking of business expenses with proper categorization</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    .service-card {
+      background: #fdf6f0;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      flex: 1 1 100%;
+    }
 
-    <!-- Bank Reconciliation Section -->
-    <section class="bookkeeping-section">
-        <div class="bookkeeping-container" style="display: flex; align-items: center; gap: 60px;">
-            <div class="bookkeeping-content">
-                <h2 class="bookkeeping-section-title">
-                    <span class="bookkeeping-emoji">🏦</span>
-                    Bank & Credit Card Reconciliation
-                </h2>
-                <p class="bookkeeping-section-text">
-                    We reconcile all linked accounts monthly, identifying missing entries or errors early. Our multi-step process ensures every dollar is accounted for and categorized properly.
-                </p>
-                <ul class="bookkeeping-features-list">
-                    <li class="bookkeeping-feature-item">
-                        <div class="bookkeeping-feature-title">Monthly Reconciliation</div>
-                        <div class="bookkeeping-feature-description">Thorough monthly reconciliation of all business accounts</div>
-                    </li>
-                    <li class="bookkeeping-feature-item">
-                        <div class="bookkeeping-feature-title">Error Detection</div>
-                        <div class="bookkeeping-feature-description">Early identification and correction of discrepancies</div>
-                    </li>
-                </ul>
-            </div>
-            <div class="bookkeeping-image">
-                 <img src="./image/websiteImage/DSC09746.JPG" alt="Financial Reports" />
-            </div>
-        </div>
-    </section>
+    .service-card h2 {
+      font-size: 1.8rem;
+      color: #d35400;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
 
-    <!-- Accounts Management Section -->
-    <section class="bookkeeping-section">
-        <div class="bookkeeping-container" style="display: flex; align-items: center; gap: 60px;">
-            <div class="bookkeeping-image">
-                 <img src="./image/websiteImage/DSC09879.JPG" alt="Financial Reports" />
-            </div>
-            <div class="bookkeeping-content">
-                <h2 class="bookkeeping-section-title">
-                    <span class="bookkeeping-emoji">💰</span>
-                    Accounts Receivable & Payable Oversight
-                </h2>
-                <p class="bookkeeping-section-text">
-                    We help businesses improve cash flow with timely invoicing, aging reports, and vendor bill management. Our team ensures nothing slips through the cracks — from follow-ups to disbursements.
-                </p>
-                <ul class="bookkeeping-features-list">
-                    <li class="bookkeeping-feature-item">
-                        <div class="bookkeeping-feature-title">Cash Flow Optimization</div>
-                        <div class="bookkeeping-feature-description">Strategic management to improve your cash position</div>
-                    </li>
-                    <li class="bookkeeping-feature-item">
-                        <div class="bookkeeping-feature-title">Vendor Relations</div>
-                        <div class="bookkeeping-feature-description">Professional handling of all vendor payments and relationships</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    .service-list {
+      list-style: none;
+    }
 
-    <!-- Financial Reports Section -->
-    <section class="bookkeeping-section">
-        <div class="bookkeeping-container" style="display: flex; align-items: center; gap: 60px;">
-            <div class="bookkeeping-content">
-                <h2 class="bookkeeping-section-title">
-                    <span class="bookkeeping-emoji">📊</span>
-                    Monthly Financial Reports You Can Trust
-                </h2>
-                <p class="bookkeeping-section-text">
-                    Each month, we deliver accurate balance sheets, profit & loss statements, and cash flow reports — with commentary if desired. We focus on clarity, consistency, and relevance.
-                </p>
-                <ul class="bookkeeping-features-list">
-                    <li class="bookkeeping-feature-item">
-                        <div class="bookkeeping-feature-title">Comprehensive Reporting</div>
-                        <div class="bookkeeping-feature-description">Complete financial picture with detailed analysis</div>
-                    </li>
-                    <li class="bookkeeping-feature-item">
-                        <div class="bookkeeping-feature-title">Custom Commentary</div>
-                        <div class="bookkeeping-feature-description">Expert insights to help you understand your numbers</div>
-                    </li>
-                </ul>
-            </div>
-            <div class="bookkeeping-image">
-                <img src="./image/websiteImage/DSC09901.JPG" alt="Financial Reports" />
-            </div>
-        </div>
-    </section>
+    .service-list li {
+      margin-bottom: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      font-weight: bold;
+      color: #d35400;
+      border: 1px solid #ffd6af;
+      transition: background 0.3s ease;
+      position: relative;
+    }
 
+    .service-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.05rem;
+      cursor: pointer;
+    }
 
-    <!-- Why Trust Us Section -->
-    <!-- <section class="bookkeeping-why-trust">
-        <div class="bookkeeping-container">
-            <h2 class="bookkeeping-section-title" style="color: white; text-align: center; margin-bottom: 20px;">
-                <span class="bookkeeping-emoji">⭐</span>
-                Why Our Clients Across the U.S. Trust Us
-            </h2>
-            <div class="bookkeeping-trust-grid">
-                <div class="bookkeeping-trust-item">
-                    <div class="bookkeeping-trust-icon">🎓</div>
-                    <h3 class="bookkeeping-trust-title">Industry-Experienced Accountants</h3>
-                    <p>Our bookkeepers are trained in U.S. GAAP and certified in tools like QuickBooks Online, Xero, and NetSuite. We serve businesses in retail, real estate, eCommerce, consulting, logistics, and healthcare.</p>
-                </div>
-                <div class="bookkeeping-trust-item">
-                    <div class="bookkeeping-trust-icon">📋</div>
-                    <h3 class="bookkeeping-trust-title">Tax-Ready Financials</h3>
-                    <p>All your records are prepared with tax season in mind — categorized, reconciled, and aligned with IRS requirements. We work seamlessly with your CPA or tax preparer for a smooth handoff.</p>
-                </div>
-                <div class="bookkeeping-trust-item">
-                    <div class="bookkeeping-trust-icon">🔧</div>
-                    <h3 class="bookkeeping-trust-title">Flexible Delivery Model</h3>
-                    <p>You choose how we work: Full-cycle bookkeeping or month-end-only? Daily check-ins or weekly summaries? We tailor our workflow to yours — using tools like Slack, ClickUp, Google Drive, or ShareFile.</p>
-                </div>
-                <div class="bookkeeping-trust-item">
-                    <div class="bookkeeping-trust-icon">🔒</div>
-                    <h3 class="bookkeeping-trust-title">Data Security & Compliance</h3>
-                    <p>Hosted on secure servers with SOC 2-ready protocols, your financial data is always protected. Role-based access and encrypted file exchanges come standard.</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
+    .arrow-icon {
+      display: inline-block;
+      transition: transform 0.3s ease;
+      font-size: 1.1rem;
+    }
 
-    <!-- Clients and Tools Section -->
-    <section class="bookkeeping-clients-tools">
-        <div class="bookkeeping-container">
-            <h2 class="bookkeeping-section-title" style="text-align: center; margin-bottom: 30px;">
-                <span class="bookkeeping-emoji">🧩</span>
-                Who We Work Best With
-            </h2>
-            <ul class="bookkeeping-features-list" style="max-width: 800px; margin: 0 auto;">
-                <li class="bookkeeping-feature-item">
-                    <div class="bookkeeping-feature-title">U.S.-based Businesses & Startups</div>
-                    <div class="bookkeeping-feature-description">Looking for consistent, affordable bookkeeping solutions</div>
-                </li>
-                <li class="bookkeeping-feature-item">
-                    <div class="bookkeeping-feature-title">CPA Firms</div>
-                    <div class="bookkeeping-feature-description">Looking to offshore clean, scalable bookkeeping work</div>
-                </li>
-                <li class="bookkeeping-feature-item">
-                    <div class="bookkeeping-feature-title">Business Founders</div>
-                    <div class="bookkeeping-feature-description">Who want clean books, cash clarity, and time back</div>
-                </li>
-            </ul>
+    .rotate {
+      transform: rotate(90deg);
+    }
 
-            <h2 class="bookkeeping-section-title" style="text-align: center; margin: 60px 0 30px 0;">
-                <span class="bookkeeping-emoji">🔄</span>
-                Tools We Work With
-            </h2>
-            <div class="bookkeeping-tools-grid">
-                <div class="bookkeeping-tool-item">QuickBooks Online</div>
-                <div class="bookkeeping-tool-item">QuickBooks Desktop</div>
-                <div class="bookkeeping-tool-item">Xero</div>
-                <div class="bookkeeping-tool-item">Bill.com</div>
-                <div class="bookkeeping-tool-item">Dext</div>
-                <div class="bookkeeping-tool-item">Hubdoc</div>
-                <div class="bookkeeping-tool-item">Gusto</div>
-                <div class="bookkeeping-tool-item">ADP</div>
-                <div class="bookkeeping-tool-item">Wagepoint</div>
-                <div class="bookkeeping-tool-item">Stripe</div>
-                <div class="bookkeeping-tool-item">PayPal</div>
-                <div class="bookkeeping-tool-item">Brex</div>
-                <div class="bookkeeping-tool-item">Expensify</div>
-            </div>
-        </div>
-    </section>
+    .service-content {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #333;
+      animation: fadeIn 0.3s ease forwards;
+    }
 
-    <!-- Call to Action Section -->
-    <section class="bookkeeping-cta">
-        <div class="bookkeeping-container">
-            <h2 class="bookkeeping-section-title" style="color: white; text-align: center; margin-bottom: 20px;">
-                <span class="bookkeeping-emoji">👥</span>
-                Get Started with a Dedicated Bookkeeping Team
-            </h2>
-            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; text-align: center; opacity: 0.9;">
-                Whether you're behind on books or just need reliable month-end help, we can support you from cleanup to ongoing delivery. Our onboarding team ensures a smooth transition within 7–10 days.
-            </p>
-            <a href="#" class="bookkeeping-cta-button">Book a Free Discovery Call</a>
-        </div>
-    </section>
+    .service-content.open {
+      display: block;
+    }
+
+    .service-content p {
+      margin-bottom: 1rem;
+      font-weight: normal;
+    }
+
+    .know-more-btn {
+      display: inline-block;
+      background-color: #ff6600;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .know-more-btn:hover {
+      background-color: #e65800;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cards-container {
+        flex-direction: column;
+        margin: 1rem auto;
+      }
+      
+      .service-card {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* Footer Styling */
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 2rem 3rem;
+      background-color: #2c3e50;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .footer-column.contact-info {
+      flex: 1.2;
+    }
+
+    .footer-logo {
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .footer-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #ff6600;
+      border-bottom: 2px solid #ff6600;
+      padding-bottom: 0.5rem;
+    }
+
+    .footer-link {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+      padding: 0.3rem 0;
+    }
+
+    .footer-link:hover {
+      color: #ff6600;
+      text-decoration: underline;
+    }
+
+    .footer-column p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .footer-column a {
+      color: #ff6600;
+      text-decoration: none;
+    }
+
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      
+      .footer-column {
+        min-width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+
+  <!-- Service Cards -->
+  <div class="cards-container">
+    <!-- Canada Services Card -->
+    <div class="service-card">
+      <h2>Services in Canada</h2>
+      <ul class="service-list">
+        <li>
+          <div class="service-title">
+            <span>✅ 1. Compilation Engagement Services</span>
+            <span class="arrow-icon rotate">▸</span>
+          </div>
+          <div class="service-content open">
+            <p>• We prepare professional, unaudited financial statements compliant with CPA Canada's CSRS 4200 standards — ideal for GST/HST filings, internal reviews, or bank applications.</p>
+            <p>• Our process includes structured templates, digital collaboration tools, and timely delivery to give you reliable financial insight without the audit costs.</p>
+            <a href="CompilationEngagement.html" class="know-more-btn">Know More →</a>
+          </div>
+        </li>
+        <li>
+          <div class="service-title">
+            <span>✅ 2. Cloud-Integrated Bookkeeping</span>
+            <span class="arrow-icon rotate">▸</span>
+          </div>
+          <div class="service-content open">
+            <p>• Tailored for Canadian businesses, we manage your day-to-day bookkeeping in QuickBooks Online, Xero, or Sage:</p>
+            <p>• Daily transaction entry & bank reconciliation</p>
+            <p>• Monthly financial statements and balance sheet reviews</p>
+            <p>• Coordination with CPA accountants for year-end prep</p>
+            <a href="Bookeepingservicecanada.html" class="know-more-btn">Know More →</a>
+          </div>
+        </li>
+        <li>
+          <div class="service-title">
+            <span>✅ 3. Canadian Tax Preparation & CRA Compliance</span>
+            <span class="arrow-icon rotate">▸</span>
+          </div>
+          <div class="service-content open">
+            <p>• From T1 and T2 filings to GST/HST, payroll deductions (T4 slips), and provincial sales taxes:</p>
+            <p>• Preparation & filing across federal and provincial levels</p>
+            <p>• CRA notice handling, assessments, and appeals</p>
+            <p>• Tax planning for corporate structures, personal wealth, CRA credits</p>
+            <a href="CaTaxpreparation.html" class="know-more-btn">Know More →</a>
+          </div>
+        </li>
+        <li>
+          <div class="service-title">
+            <span>✅ 4. Investment Accounting & Portfolio Reporting</span>
+            <span class="arrow-icon rotate">▸</span>
+          </div>
+          <div class="service-content open">
+            <p>• For businesses and advisors, we manage comprehensive investment accounting and reporting:</p>
+            <p>• Recording equities, bonds, mutual funds, dividends & interest</p>
+            <p>• Detailed portfolio valuation, gain/loss tracking, and performance analysis</p>
+            <p>• Reconciliation of broker statements and CRA compliance (ASPE/IFRS)</p>
+            <a href="InvestmentAccounting.html" class="know-more-btn">Know More →</a>
+          </div>
+        </li>
+        <li>
+          <div class="service-title">
+            <span>✅ 5. Payroll & Benefits Administration</span>
+            <span class="arrow-icon rotate">▸</span>
+          </div>
+          <div class="service-content open">
+            <p>• End-to-end payroll solutions suited for Canadian employment regulations:</p>
+            <p>• Bi-weekly or monthly payroll processing, deductions, remittances</p>
+            <p>• T4, T4A, ROE issuances and year-end reconciliations</p>
+            <p>• CPP/EI filings, provincial requirements (e.g., QPP, EI Québec)</p>
+            <a href="yearEndAccount.html" class="know-more-btn">Know More →</a>
+          </div>
+        </li>
+        <li>
+          <div class="service-title">
+            <span>✅ 6. Month-End & Year-End Close</span>
+            <span class="arrow-icon rotate">▸</span>
+          </div>
+          <div class="service-content open">
+            <p>• Dedicated financial close support to achieve clean, audit-ready books:</p>
+            <p>• Accruals, amortizations, intercompany reconciliations</p>
+            <p>• GST/HST and payroll remittances aligned with fiscal periods</p>
+            <p>• Assistance with external reviews, audits, or financial statement compilation</p>
+            <a href="RiewViewEngagement.html" class="know-more-btn">Know More →</a>
+          </div>
+        </li>
+        <li>
+          <div class="service-title">
+            <span>✅ 7. Advisory & Fractional CFO Services</span>
+            <span class="arrow-icon rotate">▸</span>
+          </div>
+          <div class="service-content open">
+            <p>• Strategic insights to help Canadian entities grow:</p>
+            <p>• Budgeting, forecasting, and cash flow modeling</p>
+            <p>• KPI reporting and performance dashboards</p>
+            <p>• Business planning, investment impact analysis, profitability studies</p>
+            <a href="bookkeepingservices.html" class="know-more-btn">Know More →</a>
+          </div>
+        </li>
+        <li>
+          <div class="service-title">
+            <span>✅ 8. Onboarding & Process Management</span>
+            <span class="arrow-icon rotate">▸</span>
+          </div>
+          <div class="service-content open">
+            <p>• A seamless transition experience for new clients:</p>
+            <p>• Dedicated Onboarding Specialist for system setup, data migration</p>
+            <p>• Training for owners and staff on cloud accounting tools</p>
+            <p>• SLA-backed monthly catch-ups, custom dashboards, and priority support</p>
+            <a href="taxprparation.html" class="know-more-btn">Know More →</a>
+          </div>
+        </li>
+        <li>
+          <div class="service-title">
+            <span>✅ 9. Software Integration & Automation</span>
+            <span class="arrow-icon rotate">▸</span>
+          </div>
+          <div class="service-content open">
+            <p>• Empower your firm with efficient systems and automated workflows:</p>
+            <p>• QuickBooks, Xero, Sage migrations and routine upkeep</p>
+            <p>• GST/HST and payroll remittance automation setups</p>
+            <p>• Integrations via Zapier, Make.com, or in-house scripts</p>
+            <a href="accountPayable.html" class="know-more-btn">Know More →</a>
+          </div>
+        </li>
+      </ul>
+      
+      <div style="margin-top: 2rem; padding: 1.5rem; background: #fff3e0; border-radius: 12px; border-left: 4px solid #ff6600;">
+        <h3 style="color: #d35400; margin-bottom: 1rem;">🌟 Why Canadian Clients Choose Us:</h3>
+        <p style="margin-bottom: 0.8rem; color: #333; font-weight: normal;">• All services led from India with Canadian-datezone support and secure workflows</p>
+        <p style="margin-bottom: 0.8rem; color: #333; font-weight: normal;">• Structured processes aligned with CPA Canada's PACT & PEG standards</p>
+        <p style="margin-bottom: 0.8rem; color: #333; font-weight: normal;">• Certified, bilingual professionals with strong knowledge of ASPE, IFRS, and CRA</p>
+        <p style="margin-bottom: 0; color: #333; font-weight: normal;">• Cost-effective offshore delivery, at significant savings vs. local providers</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action Section -->
+  <section class="bookkeeping-cta">
+      <div class="bookkeeping-container">
+          <h2 class="bookkeeping-section-title" style="color: white; text-align: center; margin-bottom: 20px;">
+              <span class="bookkeeping-emoji">👥</span>
+              Get Started with Our Canadian Services Team
+          </h2>
+          <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; text-align: center; opacity: 0.9;">
+              Whether you need compilation services, tax preparation, or comprehensive bookkeeping, our Canadian-focused team ensures compliance with CPA Canada standards and CRA requirements.
+          </p>
+          <a href="contact.html" class="bookkeeping-cta-button">Book a Free Discovery Call</a>
+      </div>
+  </section>
 
 
 
@@ -477,5 +594,23 @@
   </div>
 </div>
      <script src="navbar.js"></script>
+     
+     <!-- JavaScript for service cards toggle -->
+     <script>
+       document.addEventListener("DOMContentLoaded", function () {
+         const items = document.querySelectorAll(".service-list li");
+
+         items.forEach(item => {
+           const title = item.querySelector(".service-title");
+           const content = item.querySelector(".service-content");
+           const arrow = item.querySelector(".arrow-icon");
+
+           title.addEventListener("click", () => {
+             content.classList.toggle("open");
+             arrow.classList.toggle("rotate");
+           });
+         });
+       });
+     </script>
 </body>
 </html>

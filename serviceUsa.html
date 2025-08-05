@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services Page</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="./image/nextledgerlogo.png">
+  <meta name="description" content="Professional financial services including loans, investments, insurance, and financial planning. Get expert advice for your financial future." />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1ycn6Ica999aV1hKO9zv+ZNuEJgPCKr7ayRwIYrM1bdZC5xRo4q4f+eQj5EYdPMPM5UJHEt0xv5DQXqfXyHrw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* Base Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fffaf6;
+      color: #333;
+    }
+
+    /* Video Section */
+    section {
+      position: relative;
+      height: 60vh;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Orange Overlay */
+    section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 102, 0, 0.3); /* orange tint overlay */
+      z-index: 1;
+    }
+
+    /* Service Cards Container */
+    .cards-container {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: -10vh auto 2rem; /* Negative margin to float upward */
+      padding: 0 1rem;
+    }
+
+    .service-card {
+      background: #fdf6f0;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      flex: 1 1 45%;
+    }
+
+    .service-card h2 {
+      font-size: 1.8rem;
+      color: #d35400;
+      margin-bottom: 1rem;
+    }
+
+    .service-list {
+      list-style: none;
+    }
+
+    .service-list li {
+      margin-bottom: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      font-weight: bold;
+      color: #d35400;
+      border: 1px solid #ffd6af;
+      transition: background 0.3s ease;
+      position: relative;
+    }
+
+    .service-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.05rem;
+      cursor: pointer;
+    }
+
+    .arrow-icon {
+      display: inline-block;
+      transition: transform 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .rotate {
+      transform: rotate(90deg);
+    }
+
+    .service-content {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #333;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    .service-content.open {
+      display: block;
+    }
+
+    .service-content p {
+      margin-bottom: 1rem;
+      font-weight: normal;
+    }
+
+    .know-more-btn {
+      display: inline-block;
+      background-color: #ff6600;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .know-more-btn:hover {
+      background-color: #e65800;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cards-container {
+        flex-direction: column;
+        margin: -5vh auto 2rem;
+      }
+
+      .service-card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+ 
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__data">
+          <a href="index.html" class="nav__logo">
+            <i class="ri-planet-line"></i>
+            <img
+              style="height: 180px; width: 220px"
+              src="./image/nextledgerlogo.png"
+              alt=""
+            />
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+
+            <li class="dropdown__item">
+    <div class="nav__link">
+      <a href="about.html">
+        About Us <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+      </a>
+    </div>
+
+    <ul class="dropdown__menu">
+      <li class="dropdown__subitem">
+        <div class="dropdown__link">
+          <a href="about.html" class="menulinkanchor">
+            <i class="ri-information-line"></i> About Us
+          </a>
+        </div>
+
+        <div class="dropdown__link">
+          <a href="outteam.html" class="menulinkanchor">
+            <i class="ri-team-line"></i> Our Team
+          </a>
+        </div>
+      </li>
+    </ul>
+  </li>
+
+            <!--=============== DROPDOWN 1 ===============-->
+                <!-- dropdown two  -->
+                <li class="dropdown__item">
+              <div class="nav__link">
+              <a  href="serviceUsa.html">
+                  Services In USA<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </a>
+              </div>
+
+              <ul class="dropdown__menu">
+
+                
+                <li class="dropdown__subitem">
+
+                      <div class="dropdown__link">
+                         <a href="bookkeepingservices.html" class="menulinkanchor">
+                        <i class="ri-refund-2-line"></i> Bookkeeping Services For U.S Businesses
+                      </a>
+                  </div>
+                  
+                  <div class="dropdown__link">
+                         <a href="taxprparation.html" class="menulinkanchor">
+                        <i class="ri-file-list-line"></i>U.S Tax Preparation
+                        Services - USA
+                      </a>
+                  </div>
+                  
+                  <div class="dropdown__link">
+                        <a href="accountPayable.html" class="menulinkanchor">
+                        <i class="ri-cash-line"></i> Accounts Payable Services & Receivable Services - USA
+                      </a>
+                  </div>
+                  
+                  <div class="dropdown__link">
+                         <a href="yearEndAccount.html" class="menulinkanchor">
+                        <i class="ri-refund-2-line"></i> Year End Accounts Preparation, Strategic Advisory & CFO-Level-Services - USA
+                      </a>
+                  </div>
+
+
+                  <div class="dropdown__link">
+                         <a href="CaTaxpreparation.html" class="menulinkanchor">
+                        <i class="ri-refund-2-line"></i> CA Tax Preparation, Services - USA
+                      </a>
+                  </div>
+                  
+                  
+                </li>
+
+               
+                 
+                </li>
+
+                
+              </ul>
+            </li>
+
+            
+            
+
+                <li class="dropdown__item">
+              <div class="nav__link">
+                   <a  href="servicecanada.html">
+
+                     Services In Canada<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </a>
+              </div>
+
+              <ul class="dropdown__menu">
+                <li class="dropdown__subitem">
+
+                  <div class="dropdown__link">
+                         <a href="CompilationEngagement.html" class="menulinkanchor">
+                        <i class="ri-refund-2-line"></i> Compilation Engagement Services
+                      </a>
+                  </div>
+                  
+                  <div class="dropdown__link">
+                         <a href="RiewViewEngagement.html" class="menulinkanchor">
+                        <i class="ri-file-list-line"></i> Review Engagement Services
+                      </a>
+                  </div>
+                  
+                  <div class="dropdown__link">
+                        <a href="Bookeepingservicecanada.html" class="menulinkanchor">
+                        <i class="ri-cash-line"></i>Bookkeeping Services For Canada Businesses
+                      </a>
+                  </div>
+                  
+                  <div class="dropdown__link">
+                         <a href="InvestmentAccounting.html" class="menulinkanchor">
+                        <i class="ri-refund-2-line"></i> Investment Accounting Services in Canada
+                      </a>
+                  </div>
+
+                  
+                </li>
+
+               
+                 
+                </li>
+
+         
+              </ul>
+            </li>
+
+            <li><a href="contact.html" class="nav__link">Contact Us</a></li>
+            <!-- <a href="priceing.html" class="nav__link">Our Pricing</a> -->
+             
+          </ul>
+        </div>
+      </nav>
+    </header>
+<!-- Video with overlay -->
+<section>
+  <video autoplay muted loop playsinline preload="auto">
+    <source src="./image/finalvideo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+<!-- Service Cards -->
+<div class="cards-container">
+  <!-- USA Services Card -->
+  <div class="service-card">
+    <h2>Services in US</h2>
+    <ul class="service-list">
+      <li>
+        <div class="service-title">
+          <span>🧾 1. Cloud-Based Bookkeeping & Financial Reporting</span>
+          <span class="arrow-icon rotate">▸</span>
+        </div>
+        <div class="service-content open">
+          <p>• Full-service bookkeeping: transaction entry, bank reconciliation, month-end closing</p>
+          <p>• Clean financial statements ready for decision-making</p>
+          <p>• Proactive cash-flow reports and KPI tracking</p>
+          <a href="bookkeepingservices.html" class="know-more-btn">Know More →</a>
+        </div>
+      </li>
+      <li>
+        <div class="service-title">
+          <span>🧑‍💼 2. US Tax Services (Individual & Business)</span>
+          <span class="arrow-icon rotate">▸</span>
+        </div>
+        <div class="service-content open">
+          <p>• Individual Tax (Form 1040): W-2/1099 tracking, deductions, credits, estimated taxes</p>
+          <p>• Business Tax (1120/1120-S/1065): Corporate, S-corp, and partnership returns</p>
+          <p>• IRS representation and notices handling</p>
+          <p>• Strategic tax planning for growth, buy-sell events, and quarterly estimates</p>
+          <a href="taxprparation.html" class="know-more-btn">Know More →</a>
+        </div>
+      </li>
+      <li>
+        <div class="service-title">
+          <span>📄 3. Accounts Payable & Receivable Management</span>
+          <span class="arrow-icon rotate">▸</span>
+        </div>
+        <div class="service-content open">
+          <p>• Vendor invoice processing, payment approval, and check/EFT disbursement</p>
+          <p>• AR workflows, billing, and dunning strategies to improve collections</p>
+          <p>• Aging reports, cash forecasting, and vendor reconciliation</p>
+          <a href="accountPayable.html" class="know-more-btn">Know More →</a>
+        </div>
+      </li>
+      <li>
+        <div class="service-title">
+          <span>📆 4. Payroll & HR Compliance</span>
+          <span class="arrow-icon rotate">▸</span>
+        </div>
+        <div class="service-content open">
+          <p>• End-to-end payroll processing for U.S. employees and contractors</p>
+          <p>• Management of W-2s, 1099s, filings, and state/federal compliance</p>
+          <p>• Integration with ADP, Gusto, QuickBooks, and custom HR/Payroll setups</p>
+          <a href="yearEndAccount.html" class="know-more-btn">Know More →</a>
+        </div>
+      </li>
+      <li>
+        <div class="service-title">
+          <span>✅ 5. Month‑end & Year‑end Closing</span>
+          <span class="arrow-icon rotate">▸</span>
+        </div>
+        <div class="service-content open">
+          <p>• Full monthly close support: amortizations, accruals, and internal control checks</p>
+          <p>• Preparation of GAAP-ready income statements, balance sheets, cash-flows</p>
+          <p>• Support for external audits and financial reviews</p>
+          <a href="CaTaxpreparation.html" class="know-more-btn">Know More →</a>
+        </div>
+      </li>
+      <li>
+        <div class="service-title">
+          <span>🚀 6. Clean‑up & Catch‑up Accounting</span>
+          <span class="arrow-icon rotate">▸</span>
+        </div>
+        <div class="service-content open">
+          <p>• Backfilling missing bookkeeping, reconciling historical data</p>
+          <p>• Clean-ups for startups or businesses migrating to cloud accounting</p>
+          <p>• Catch-up support to get your books audit‑ and loan‑ready</p>
+        </div>
+      </li>
+      <li>
+        <div class="service-title">
+          <span>🔍 7. US Compliance & Advisory</span>
+          <span class="arrow-icon rotate">▸</span>
+        </div>
+        <div class="service-content open">
+          <p>• Sales tax filings (monthly/quarterly/state-specific)</p>
+          <p>• IRS notices, penalty resolution, and audit assistance</p>
+          <p>• Quarterly advisory calls and KPI dashboards to support decision-making</p>
+        </div>
+      </li>
+      <li>
+        <div class="service-title">
+          <span>📊 8. Advisory & CFO‑Level Services</span>
+          <span class="arrow-icon rotate">▸</span>
+        </div>
+        <div class="service-content open">
+          <p>• Fractional CFO guidance: budgeting, forecasting, and scenario planning</p>
+          <p>• KPI analysis, profitability assessments, and financial strategy support</p>
+          <p>• Debt & equity planning, cash optimization, and performance dashboards</p>
+          <a href="bookkeepingservices.html" class="know-more-btn">Know More →</a>
+        </div>
+      </li>
+      <li>
+        <div class="service-title">
+          <span>🧩 9. Software Integration & Automation</span>
+          <span class="arrow-icon rotate">▸</span>
+        </div>
+        <div class="service-content open">
+          <p>• Advanced setup and optimization of QuickBooks, Xero, and cloud ERP tools</p>
+          <p>• Automation using Zapier/Make.com for bank feeds, invoice processing</p>
+          <p>• Staff training for efficient adoption of cloud-based systems</p>
+          <a href="taxprparation.html" class="know-more-btn">Know More →</a>
+        </div>
+      </li>
+      <li>
+        <div class="service-title">
+          <span>👫 10. Onboarding & Client Experience</span>
+          <span class="arrow-icon rotate">▸</span>
+        </div>
+        <div class="service-content open">
+          <p>• Dedicated Onboarding Specialist to streamline paperwork, integration, and system setup</p>
+          <p>• SLA-driven client success: monthly check-ins, priority support, and reports</p>
+          <p>• Secure portals (e.g., ShareFile, Dropbox, Slack) for smooth collaboration</p>
+          <a href="accountPayable.html" class="know-more-btn">Know More →</a>
+        </div>
+      </li>
+    </ul>
+    
+    <div style="margin-top: 2rem; padding: 1.5rem; background: #fff3e0; border-radius: 12px; border-left: 4px solid #ff6600;">
+      <h3 style="color: #d35400; margin-bottom: 1rem;">🌐 Supporting Statements</h3>
+      <p style="margin-bottom: 0.8rem; color: #333; font-weight: normal;">• All services are delivered from our India HQ with U.S. timezone support, ensuring real-time client communication.</p>
+      <p style="margin-bottom: 0.8rem; color: #333; font-weight: normal;">• Our dedicated teams (bookkeeping, tax, payroll) and backup professionals maintain uninterrupted workflows.</p>
+      <p style="margin-bottom: 0; color: #333; font-weight: normal;">• We combine onsite-level expertise with offshore efficiency, driving cost-savings of 30–60% compared to local providers.</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="footer-container">
+  <div class="footer-column contact-info">
+    <img src="./image/nextledgerlogo3.png" alt="Advance Finserv Logo" class="footer-logo" />
+    
+    <p>📞 <a style="color: white;" href="tel:+18885520055">+1 (888) 552-0055</a></p>
+    <p>📧 info@nextledgers.com</p>
+    <p>📍 Mayapuri Commercial Area,</p>
+    <p> New Delhi, 110064</p>
+  </div>
+
+  <div class="footer-column">
+    <h3 class="footer-title">Our Services in USA</h3>
+    <a href="#" class="footer-link">Bookkeeping Services</a>
+    <a href="#" class="footer-link">Tax Preparation Services</a>
+    <a href="#" class="footer-link">Accounts Payable Services</a>
+    <a href="#" class="footer-link">Year End Account</a>
+  </div>
+
+  <div class="footer-column">
+    <h3 class="footer-title">Our Services in Canada</h3>
+    <a href="#" class="footer-link">Compilation Services</a>
+    <a href="#" class="footer-link">Tax Preparation Services</a>
+    <a href="#" class="footer-link">Canada Bookkeeping Services</a>
+    <a href="#" class="footer-link">Canada Investment Accounting Services</a>
+  </div>
+
+  <div class="footer-column">
+    <h3 class="footer-title">Quick Links</h3>
+    <a href="#" class="footer-link">Home</a>
+    <a href="#" class="footer-link">About Us</a>
+    <a href="#" class="footer-link">Pricing</a> 
+    <a href="#" class="footer-link">Contact Us</a>
+  </div>
+</div>
+
+<!-- JavaScript for toggle -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".service-list li");
+
+    items.forEach(item => {
+      const title = item.querySelector(".service-title");
+      const content = item.querySelector(".service-content");
+      const arrow = item.querySelector(".arrow-icon");
+
+      title.addEventListener("click", () => {
+        content.classList.toggle("open");
+        arrow.classList.toggle("rotate");
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

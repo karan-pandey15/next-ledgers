@@ -1436,7 +1436,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .expertise-card.wide {
-  grid-column: span 2;
+  grid-column: span 4;
 }
 
 @media (max-width: 600px) {
@@ -2087,6 +2087,16 @@ button:hover {
 /* video section starts here */
 .hero-section {
   position: relative;
+  height: 60vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroabout-section {
+ position: relative;
   height: 60vh;
   width: 100%;
   overflow: hidden;
