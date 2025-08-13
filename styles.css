@@ -1707,12 +1707,12 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
 }
 
-/* footer styling start here  */.footer-container {
+ .footer-container {
   background: linear-gradient(rgba(0, 71, 119, 0.9), rgba(0, 71, 119, 0.9)),
               url('/mnt/data/ee0d03e5-1dab-4b70-a485-199aefa60046.png') no-repeat center center/cover;
   display: flex;
   flex-wrap: wrap;
-  padding: 40px;
+padding: 40px;
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
   gap: 30px;
@@ -1720,7 +1720,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-column {
-  flex: 1 1 220px;
+  flex: 1 1 1 1;
   min-width: 200px;
 }
 
@@ -1754,6 +1754,21 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 10px;
   color: #fff;
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.footer-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 28px; /* Adjust for icon width */
+  font-size: 1.1rem;
 }
 
 
@@ -2166,6 +2181,65 @@ button:hover {
   }
 }
 
+
+ 
+
+.why-next-ledgers {
+  background-color: #fff5ec; /* light orange background */
+  padding: 10px 20px;
+}
+
+.containerdata{ 
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.image-box {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.text-box {
+  flex: 1 1 50%;
+  background-color: white;
+  padding: 30px;
+  border-left: 6px solid #FF6B00; /* orange border accent */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.15);
+}
+
+.text-box h1 {
+  color: #FF6B00;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* .text-box p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+} */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .text-box {
+    border-left: none;
+    border-top: 6px solid #FF6B00;
+  }
+}
 /* craousel code start here  */
 
  .carousel-container {
